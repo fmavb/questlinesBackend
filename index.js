@@ -26,6 +26,10 @@ part2 = 0;
 part3 = 0;
 challenge3 = 0;
 
+app.get("/", (req, res) => {
+    res.send("<html><body><h1>REST API</h1></body></html>");
+});
+
 app.get("/challenge1", (req, res) => {
     res.json({score: challenge1});
 });

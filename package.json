@@ -16,7 +16,8 @@
     "express": "^4.17.1",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "serverless-http": "^2.3.1"
   },
   "nodemonConfig": {
     "restartable": "rs",
@@ -26,7 +27,7 @@
     "delay": "2500",
     "env": {
       "NODE_ENV": "development",
-      "PORT": 443
+      "PORT": 4000
     }
   }
 }

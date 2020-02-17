@@ -1,4 +1,5 @@
 
+const serverless = require('serverless-http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const debug = require('debug')('app');
@@ -79,4 +80,6 @@ app.post("/challenge3", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Listening on port ${chalk.green(port)}`);
-  });
+});
+
+module.exports.handler = serverless(app);

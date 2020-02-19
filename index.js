@@ -69,6 +69,11 @@ app.post("/part3", (req, res) => {
     res.json({response: "Value set"});
 });
 
+app.get("/challenge2", (req, res) => {
+    const output = part1 + part2 + part3;
+    res.json({score: output});
+})
+
 app.get("/challenge3", (req, res) => {
     res.json({score: challenge3});
 });

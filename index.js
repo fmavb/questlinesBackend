@@ -25,7 +25,12 @@ challenge1 = 0;
 part1 = 0;
 part2 = 0;
 part3 = 0;
+challenge2Completed = true;
 challenge3 = 0;
+
+const evaluationRouter = require('./evaluation')();
+
+app.use('/evaluation', evaluationRouter);
 
 app.get("/", (req, res) => {
     res.send("<html><body><h1>REST API</h1></body></html>");
@@ -66,12 +71,15 @@ app.get("/part3", (req, res) => {
 
 app.post("/part3", (req, res) => {
     part3 = req.body.score;
+    challenge2Completed = true;
     res.json({response: "Value set"});
 });
 
 app.get("/challenge2", (req, res) => {
     const output = part1 + part2 + part3;
-    res.json({score: output});
+    res.json({score: output, completed: challenge2Completed});
+    part1, part2, part3 = 0;
+    challenge2Completed = false;
 })
 
 app.get("/challenge3", (req, res) => {

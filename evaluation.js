@@ -1,6 +1,6 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://fmavb:Ab150198@cryptodb-ogqc3.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://backend:wzOA4mXtuSnBiKDV@cryptodb-ogqc3.mongodb.net/test?retryWrites=true&w=majority";
 
 const router = express.Router();
 

@@ -24,6 +24,63 @@ module.exports = function evaluationRouter() {
         });
     });
 
+    router.route('/challenge2/part1').post((req, res) => {
+        MongoClient.connect(uri, (err, client) => {
+            if (err){
+                console.log(err);
+                res.json({error: err});
+            } else {
+                const db = client.db('evaluation');
+                db.collection("challenge2").insertOne(req.body, (err, result) => {
+                    if (err) {
+                        console.log(err);
+                        res.json({error: err});
+                    } else {
+                        res.json({response: result});
+                    }
+                });
+            }
+        });
+    });
+
+    router.route('/challenge2/part2').post((req, res) => {
+        MongoClient.connect(uri, (err, client) => {
+            if (err){
+                console.log(err);
+                res.json({error: err});
+            } else {
+                const db = client.db('evaluation');
+                db.collection("challenge2").insertOne(req.body, (err, result) => {
+                    if (err) {
+                        console.log(err);
+                        res.json({error: err});
+                    } else {
+                        res.json({response: result});
+                    }
+                });
+            }
+        });
+    });
+
+    router.route('/challenge2/part3').post((req, res) => {
+        MongoClient.connect(uri, (err, client) => {
+            if (err){
+                console.log(err);
+                res.json({error: err});
+            } else {
+                const db = client.db('evaluation');
+                db.collection("challenge2").insertOne(req.body, (err, result) => {
+                    if (err) {
+                        console.log(err);
+                        res.json({error: err});
+                    } else {
+                        res.json({response: result});
+                    }
+                });
+            }
+        });
+    });
+
     router.route('/challenge3').post((req, res) => {
         MongoClient.connect(uri, (err, client)=>{
             if (err){

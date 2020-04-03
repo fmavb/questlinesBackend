@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
 
 app.get("/challenge1", (req, res) => {
     res.json({score: challenge1});
+    challenge1 = 0;
 });
 
 app.post("/challenge1", (req, res) => {
@@ -84,6 +85,7 @@ app.get("/challenge2", (req, res) => {
 
 app.get("/challenge3", (req, res) => {
     res.json({score: challenge3});
+    challenge3 = 0;
 });
 
 app.post("/challenge3", (req, res) => {
